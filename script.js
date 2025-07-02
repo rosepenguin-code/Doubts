@@ -78,8 +78,6 @@ function skipLivro() {
   mostrarLivroAtual();
 }
 
-// Atualizar a secção "My Librarie"
-// ... (restante código acima permanece igual)
 
 // Atualizar a secção "My Librarie"
 function atualizarLibrarie() {
