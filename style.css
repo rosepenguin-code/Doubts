@@ -1,0 +1,346 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-image: url('https://cdn.discordapp.com/attachments/1017214329751359591/1389341003588173955/Imagem20para20fundo20de20tela20amor20por20livros20leitura20.png?ex=6864ece3&is=68639b63&hm=78d73c9439c5b1b3e41bc285049a9b51673d4a67a0ddc2f1e382e303d76e3b4c&');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: #8b0035;
+  min-height: 100vh;
+  padding: 0 10px 40px 10px;
+}
+
+/* Navbar */
+.navbar {
+  background-color: rgba(255, 192, 203, 0.75);
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+.navbar ul li button {
+  background: transparent;
+  border: none;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #8b0035;
+  padding: 8px 15px;
+  border-radius: 25px;
+  transition: background-color 0.3s ease;
+}
+
+.navbar ul li button:hover {
+  background-color: #ffb6c1;
+  color: white;
+}
+
+/* Título principal */
+#tituloPrincipal {
+  font-family: 'Pacifico', cursive;
+  font-size: 3rem;
+  color: #8b0035;
+  background-color: rgba(255, 192, 203, 0.6);
+  padding: 20px 40px;
+  border-radius: 30px;
+  text-align: center;
+  margin: 20px auto;
+  display: block;
+}
+
+/* Secções */
+section {
+  max-width: 900px;
+  margin: 20px auto;
+}
+
+/* Barra de pesquisa centrada */
+.barra-pesquisa {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px auto;
+  gap: 10px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+#inputPesquisa {
+  width: 40%;
+  padding: 10px;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  border: 2px solid #8b0035;
+}
+
+#inputPesquisa:focus {
+  outline: none;
+  border-color: #ffb6c1;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  background-color: #8b0035;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #ffb6c1;
+  color: #8b0035;
+}
+
+/* Resultado dos livros */
+.livro-card {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  width: 420px;
+  padding: 25px;
+  margin: 30px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.livro-card img {
+  width: 240px;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.livro-card h3 {
+  font-size: 1.4rem;
+  color: #8b0035;
+  margin-bottom: 10px;
+}
+
+.livro-card p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 5px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ver-mais {
+  color: #8b0035;
+  font-weight: bold;
+  cursor: pointer;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+.botoes {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+/* Título "My Librarie" visível */
+#secaoLibrarie h2 {
+  color: #8b0035;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 12px 24px;
+  border-radius: 20px;
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Formulário "My Librarie" */
+#formRequest {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+#formRequest input {
+  width: 200px;
+  padding: 10px;
+  border-radius: 6px;
+  border: 2px solid #8b0035;
+  font-size: 1rem;
+}
+
+#formRequest input:focus {
+  outline: none;
+  border-color: #ffb6c1;
+}
+
+/* Lista de livros gostados */
+#livrosGostados {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Livro gostado */
+.livro-gostado {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: white;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(139, 0, 53, 0.15);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Bloco imagem + estrelas */
+.imagem-avaliacao {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.livro-gostado img {
+  width: 120px;
+  height: 160px;
+  border-radius: 12px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+/* Estrelas de avaliação */
+.avaliacao {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin-bottom: 15px;
+}
+
+.estrela {
+  font-size: 1.7rem;
+  color: #ccc;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.estrela:hover,
+.estrela:hover ~ .estrela {
+  color: #ffb6c1;
+}
+
+/* Rating (Avaliação por Estrelas) */
+.rating {
+  display: inline-flex; /* alinhamento horizontal */
+  justify-content: center;
+  gap: 10px;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #d3d3d3;
+  transition: color 0.2s ease-in-out;
+  margin-top: 10px;
+}
+
+.rating .fa-star {
+  transition: color 0.2s ease-in-out;
+}
+
+.rating .fa-star:hover,
+.rating .fa-star:hover ~ .fa-star {
+  color: #f5b2dd;
+}
+
+.rating .fa-star.filled {
+  color: #f5b2dd;
+}
+
+/* Container da avaliação para alinhar texto + estrelas */
+.avaliacao-container {
+  max-width: 700px;
+  margin: 20px auto;
+  background-color: white;
+  padding: 15px 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(139, 0, 53, 0.15);
+  text-align: center;
+}
+
+#rating-value {
+  font-size: 1.2rem;
+  color: #8b0035;
+  margin-bottom: 10px;
+}
+
+/* Info do livro */
+.livro-gostado .info h4 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #8b0035;
+}
+
+.livro-gostado .info p {
+  font-size: 1rem;
+  color: #5a1a35;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 15;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(139, 0, 53, 0.85);
+}
+
+.modal-content {
+  background-color: #fff0f6;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 15px;
+  width: 80%;
+  max-width: 600px;
+  color: #8b0035;
+  font-size: 1.1rem;
+  box-shadow: 0 0 10px #8b0035;
+}
+
+.fechar {
+  color: #8b0035;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.fechar:hover {
+  color: #ffb6c1;
+}
+

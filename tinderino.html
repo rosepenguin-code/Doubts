@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tinderino dos Livros</title>
+  <!-- Font Awesome para as estrelas ANTES do css-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+
+  <nav class="navbar">
+    <ul>
+      <li><button onclick="mostrarSecao('secaoProcura')">Início</button></li>
+      <li><button onclick="mostrarSecao('secaoLibrarie')">My Librarie</button></li>
+    </ul>
+  </nav>
+
+  <h1 id="tituloPrincipal">Tinderino dos Livros</h1>
+
+  <!-- Barra de pesquisa -->
+  <div class="barra-pesquisa">
+    <input type="text" id="inputPesquisa" placeholder="Procurar livros..." />
+    <button onclick="procurarLivros()">Pesquisar</button>
+  </div>
+
+  <!-- Secção de procura -->
+  <section id="secaoProcura">
+    <div id="resultadosLivros"></div>
+  </section>
+
+  <!-- Secção da biblioteca -->
+  <section id="secaoLibrarie" style="display:none">
+    <h2>My Librarie</h2>
+    <form id="formRequest">
+      <input type="text" placeholder="Title" name="title" />
+      <input type="text" placeholder="Author" name="author" />
+      <input type="text" placeholder="Publisher" name="publisher" />
+      <input type="text" placeholder="Year" name="year" />
+      <input type="text" placeholder="Genre" name="genre" />
+      <button type="submit">Request Book</button>
+    </form>
+
+    <!-- Aqui vão aparecer os livros guardados com as estrelas para avaliar -->
+    <div id="livrosGostados"></div>
+    
+  </section>
+
+  <!-- Modal para descrição completa -->
+  <div id="modalDescricao" class="modal" style="display:none;">
+    <div class="modal-content">
+      <span onclick="fecharModal()" class="fechar">&times;</span>
+      <p id="descricaoCompleta"></p>
+    </div>
+  </div>
+<img id="myBook" onclick="toggleBook()" src="book_closed.png" width="150" height="180">
+  <script src="script.js"></script>
+</body>
+
+</html>
